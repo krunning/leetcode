@@ -1,0 +1,32 @@
+public class Solution {
+    public int ladderLength(String start, String end, HashSet<String> dict) {
+        if(dict.size()==0)
+            return 0;
+        Queue<String> queue = new LinkedList<String> ();
+        Queue<Integer> len = new LinkedList<Integer> ();
+        dict.add(start);
+        dict.add(end);
+        queue.offer(start);
+        len.offer(1);
+        while(!queue.isEmpty()){
+            String s = queue.poll();
+            int l = len.poll();
+            if(s.equals(end)) return l;
+            for(int i=0;i<s.length();i++){
+                char[] chars = s.toCharArray();
+                for(char c='a';c<='z';c++){
+                    if(c!=chars[i]){
+                        chars[i]=c;
+                        String temp = new String(chars);
+                        if(dict.contains(temp)){
+                            len.offer(l+1);
+                            queue.offer(temp);
+                            dict.remove(temp);
+                        }
+                    }
+                }
+            }
+        }
+        return 0;
+    }
+}
