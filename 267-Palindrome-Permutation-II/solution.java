@@ -9,7 +9,7 @@ public class Solution {
             }else{
                 map.put(s.charAt(i), 1);
             }
-            odd += map.get(s.charAT(i)) % 2 == 0 ? -1 : 1;
+            odd += map.get(s.charAt(i)) % 2 == 0 ? -1 : 1;
         }
         if(odd > 1) return res;
         List<Character> chars = new ArrayList<Character>();
@@ -27,7 +27,7 @@ public class Solution {
     }
     private void helper(List<Character> chars, String mid ,boolean[] visited, StringBuffer sb, List<String> res){
         if(sb.length() == chars.size()){
-            res.add(sb.toString + mid + sb.reverse().toString());
+            res.add(sb.toString() + mid + sb.reverse().toString());
             sb.reverse();
             return;
         }
