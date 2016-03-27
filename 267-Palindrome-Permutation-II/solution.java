@@ -18,10 +18,9 @@ public class Solution {
         for(Entry<Character, Integer> entry : map.entrySet()){
             if(entry.getValue() % 2 != 0){
                 mid += entry.getKey();
-            }else{
-                for(int i = 0; i < entry.getValue() / 2; i++)
-                    chars.add(entry.getKey());
-            }
+            {
+            for(int i = 0; i < entry.getValue() / 2; i++)
+                chars.add(entry.getKey());
         }
         helper(chars, mid, new boolean[chars.size()], new StringBuffer(), res);
         return res;
