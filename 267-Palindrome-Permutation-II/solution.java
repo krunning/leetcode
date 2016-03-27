@@ -1,3 +1,4 @@
+import java.util.Map.Entry;
 public class Solution {
     public List<String> generatePalindromes(String s) {
         List<String> res = new ArrayList<String>();
