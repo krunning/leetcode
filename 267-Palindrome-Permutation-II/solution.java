@@ -36,7 +36,9 @@ public class Solution {
                 continue;
             }
             visited[i] = true;
-            helper(chars, mid, visited, sb.append(chars.get(i)), res);
+            sb.append(chars.get(i));
+            helper(chars, mid, visited, sb, res);
+            sb.deleteCharAt(sb.length() - 1);
             visited[i] = false;
         }
     }
