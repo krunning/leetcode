@@ -32,8 +32,8 @@ public class Solution {
             level ++;
             int size = 0;
             for(int i = 0; i < size; i ++){
-                NestedInteger cur = queue.poll();
-                for(NestedInteger n : cur.getList()){
+                List<NestedInteger> cur = queue.poll();
+                for(NestedInteger n : cur){
                     if(!n.isInteger()){
                         queue.offer(n.getList());
                     } else {
