@@ -20,7 +20,7 @@ public class Solution {
         if(nestedList == null) return 0;
         int level = 1;
         int res = 0;
-        Queue<NestedInteger> queue = new LinkedList<NestedInteger>();
+        Queue<List<NestedInteger>> queue = new LinkedList<List<NestedInteger>>();
         for(NestedInteger n : nestedList){
             if(!n.isInteger()){
                 queue.offer(n.getList());
