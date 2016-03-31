@@ -30,7 +30,7 @@ public class Solution {
         }
         while(!queue.isEmpty()){
             level ++;
-            int size = 0;
+            int size = queue.size();
             for(int i = 0; i < size; i ++){
                 List<NestedInteger> cur = queue.poll();
                 for(NestedInteger n : cur){
