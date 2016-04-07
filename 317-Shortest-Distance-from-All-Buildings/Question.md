@@ -23,18 +23,18 @@ There will be at least one building. If it is not possible to build such house a
 
 <div>
 
-<div id="company_tags" class="btn btn-xs btn-warning">Hide Company Tags</div>
+<div id="company_tags" class="btn btn-xs btn-warning">Show Company Tags</div>
 
-<span class="hidebutton" style="display: inline;">[Google](/company/google/) [Zenefits](/company/zenefits/)</span></div>
-
-<div>
-
-<div id="tags" class="btn btn-xs btn-warning">Hide Tags</div>
-
-<span class="hidebutton" style="display: inline;">[Breadth-first Search](/tag/breadth-first-search/)</span></div>
+<span class="hidebutton">[Google](/company/google/) [Zenefits](/company/zenefits/)</span></div>
 
 <div>
 
-<div id="similar" class="btn btn-xs btn-warning">Hide Similar Problems</div>
+<div id="tags" class="btn btn-xs btn-warning">Show Tags</div>
 
-<span class="hidebutton" style="display: inline;">[(M) Walls and Gates](/problems/walls-and-gates/) [(H) Best Meeting Point](/problems/best-meeting-point/)</span></div>
+<span class="hidebutton">[Breadth-first Search](/tag/breadth-first-search/)</span></div>
+
+<div>
+
+<div id="similar" class="btn btn-xs btn-warning">Show Similar Problems</div>
+
+<span class="hidebutton">[(M) Walls and Gates](/problems/walls-and-gates/) [(H) Best Meeting Point](/problems/best-meeting-point/)</span></div>
