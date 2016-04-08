@@ -2,14 +2,11 @@
 // https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html
 class PeekingIterator implements Iterator<Integer> {
     Iterator<Integer> iterator;
-    int cur;
-    boolean isLast = false;
+    int cur == null;
 	public PeekingIterator(Iterator<Integer> iterator) {
         this.iterator = iterator;
         if(iterator.hasNext()){
             cur = iterator.next();
-        }else{
-            isLast = true;
         }
 	}
 
@@ -22,23 +19,13 @@ class PeekingIterator implements Iterator<Integer> {
 	// Override them if needed.
 	@Override
 	public Integer next() {
-	    if(!isLast){
-	        int tmp = cur;
-	        cur = iterator.next();
-	        return tmp;
-	    }else{
-	        return cur;
-	    }
+	    int res = cur;
+	    cur == iterator.hasNext() ? iterator.next() : null;
+	    return res;
 	}
 
 	@Override
 	public boolean hasNext() {
-	    if(!iterator.hasNext() && isLast){
-	        return false;
-	    }
-	    if(!iterator.hasNext()){
-	        isLast = true;
-	    }
-	    return true;
+	    return cur == null;
 	}
 }
