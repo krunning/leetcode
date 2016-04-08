@@ -6,15 +6,22 @@ public class Solution {
         UnionFind unionFind = new UnionFind(m, n);
         int[] dx = {0 ,0 ,1, -1};
         int[] dy = {1, -1, 0, 0};
+        int[][] matrix = new int[m][n];
         for(int i = 0; i < positions.length; i++){
             num++;
             int curX = positions[i][0];
             int curY = positions[i][1];
+            matrix[curX][curY] = 1;
             for(int k = 0; k < 4; k ++){
                 int x = dx[k] + curX;
                 int y = dy[k] + curY;
-                if(isValid(x, y, m, n) && unionFind(convertToId(curX, curY, m)) == unionFind(convertToId(x, y, m))){
-                    num --;
+                if(isValid(x, y, m, n) && matrix[x][y] == 1){
+                    int fa1 = unionFind.find(convertToId(curX, curY, m));
+                    int fa2 = unionFind.find(convertToId(x, y, m));
+                    if(fa1 == fa2){
+                        num --;
+                    }
+                    unionFind.union(fa1, fa2);
                 }
             }
             res.add(num);
