@@ -40,7 +40,7 @@ public class Solution {
             father = new HashMap<Integer, Integer>();
             for(int i = 0; i < m; i++){
                 for(int j = 0; j < n; j++){
-                    father.put(convertToId(x, y, m), convertToId(x, y, m));
+                    father.put(convertToId(i, j, m), convertToId(i, j, m));
                 }
             }
         }
