@@ -20,7 +20,7 @@ class PeekingIterator implements Iterator<Integer> {
 	@Override
 	public Integer next() {
 	    int res = cur;
-	    cur == iterator.hasNext() ? iterator.next() : null;
+	    cur = iterator.hasNext() ? iterator.next() : null;
 	    return res;
 	}
 
