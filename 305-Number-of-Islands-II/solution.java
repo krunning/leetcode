@@ -16,8 +16,8 @@ public class Solution {
                 int x = dx[k] + curX;
                 int y = dy[k] + curY;
                 if(isValid(x, y, m, n) && matrix[x][y] == 1){
-                    int fa1 = unionFind.find(convertToId(curX, curY, m));
-                    int fa2 = unionFind.find(convertToId(x, y, m));
+                    int fa1 = unionFind.find(convertToId(curX, curY, n));
+                    int fa2 = unionFind.find(convertToId(x, y, n));
                     if(fa1 != fa2){
                         num --;
                         unionFind.union(fa1, fa2);
@@ -40,7 +40,7 @@ public class Solution {
             father = new HashMap<Integer, Integer>();
             for(int i = 0; i < m; i++){
                 for(int j = 0; j < n; j++){
-                    father.put(convertToId(i, j, m), convertToId(i, j, m));
+                    father.put(convertToId(i, j, n), convertToId(i, j, n));
                 }
             }
         }
@@ -65,7 +65,7 @@ public class Solution {
             }
         }
     }
-    private int convertToId(int x, int y, int m){
-        return x * m + y;
+    private int convertToId(int x, int y, int n){
+        return x * n + y;
     }
 }
