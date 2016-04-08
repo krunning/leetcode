@@ -18,10 +18,10 @@ public class Solution {
                 if(isValid(x, y, m, n) && matrix[x][y] == 1){
                     int fa1 = unionFind.find(convertToId(curX, curY, m));
                     int fa2 = unionFind.find(convertToId(x, y, m));
-                    if(fa1 == fa2){
+                    if(fa1 != fa2){
                         num --;
+                        unionFind.union(fa1, fa2);
                     }
-                    unionFind.union(fa1, fa2);
                 }
             }
             res.add(num);
@@ -49,19 +49,20 @@ public class Solution {
             while(fa != father.get(fa)){
                 fa = father.get(fa);
             }
-            int parent = father.get(p);
+            int parent = p;
             while(parent != father.get(parent)){
                 int next = father.get(parent);
                 father.put(parent, fa);
                 parent = next;
             }
-            father.put(p, fa);
             return fa;
         }
         public void union(int a, int b){
             int fa = find(a);
             int fb = find(b);
-            father.put(fa,fb);
+            if(fa != fb){
+                father.put(fa,fb);
+            }
         }
     }
     private int convertToId(int x, int y, int m){
