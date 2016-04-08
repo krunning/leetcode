@@ -26,6 +26,6 @@ class PeekingIterator implements Iterator<Integer> {
 
 	@Override
 	public boolean hasNext() {
-	    return cur == null;
+	    return cur != null;
 	}
 }
