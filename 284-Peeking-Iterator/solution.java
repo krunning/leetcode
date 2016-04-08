@@ -2,7 +2,7 @@
 // https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html
 class PeekingIterator implements Iterator<Integer> {
     Iterator<Integer> iterator;
-    int cur == null;
+    int cur = null;
 	public PeekingIterator(Iterator<Integer> iterator) {
         this.iterator = iterator;
         if(iterator.hasNext()){
