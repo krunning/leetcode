@@ -2,7 +2,7 @@
 // https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html
 class PeekingIterator implements Iterator<Integer> {
     Iterator<Integer> iterator;
-    int cur = null;
+    Integer cur = null;
 	public PeekingIterator(Iterator<Integer> iterator) {
         this.iterator = iterator;
         if(iterator.hasNext()){
@@ -19,7 +19,7 @@ class PeekingIterator implements Iterator<Integer> {
 	// Override them if needed.
 	@Override
 	public Integer next() {
-	    int res = cur;
+	    Integer res = cur;
 	    cur = iterator.hasNext() ? iterator.next() : null;
 	    return res;
 	}
