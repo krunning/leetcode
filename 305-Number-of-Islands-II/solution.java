@@ -59,8 +59,8 @@ public class Solution {
             return fa;
         }
         public void union(int a, int b){
-            fa = find(a);
-            fb = find(b);
+            int fa = find(a);
+            int fb = find(b);
             father.put(fa,fb);
         }
     }
