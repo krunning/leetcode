@@ -33,6 +33,6 @@ public class Solution {
         if(carry != 0){
             p.next = new ListNode(carry);
         }
-        return dummy.next;
+       // return dummy.next;
     }
 }
