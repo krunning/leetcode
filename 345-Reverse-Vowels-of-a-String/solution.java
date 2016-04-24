@@ -10,7 +10,7 @@ public class Solution {
                 chars[end] = tmp;
                 start ++;
                 end --;
-            }else if(!isVowel(chars[start]){
+            }else if(!isVowel(chars[start])){
                 start++;
             }else{
                 end--;
