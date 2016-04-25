@@ -26,7 +26,7 @@ public class NestedIterator implements Iterator<Integer> {
 
     @Override
     public Integer next() {
-        cur.getInteger();
+        return cur.getInteger();
     }
 
     @Override
