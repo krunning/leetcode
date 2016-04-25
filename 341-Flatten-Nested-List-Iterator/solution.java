@@ -33,7 +33,7 @@ public class NestedIterator implements Iterator<Integer> {
     public boolean hasNext() {
         while(!stack.isEmpty()){
             Iterator<NestedInteger> peek = stack.peek();
-            if(peek.hasNext){
+            if(peek.hasNext()){
                 NestedInteger next = peek.next();
                 if(next.isInteger()){
                     cur = next;
