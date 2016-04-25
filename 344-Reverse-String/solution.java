@@ -8,6 +8,8 @@ public class Solution {
             char tmp = chars[end];
             chars[end] = chars[start];
             chars[start] = tmp;
+            start++;
+            end--;
         }
         return new String(chars);
     }
