@@ -34,12 +34,11 @@ public class NestedIterator implements Iterator<Integer> {
         while(!stack.isEmpty()){
             Iterator<NestedInteger> peek = stack.peek();
             if(peek.hasNext()){
-                NestedInteger next = peek.next();
-                if(next.isInteger()){
-                    cur = next;
+                cur = peek.next();
+                if(cur.isInteger()){
                     return true;
                 }else{
-                    stack.push(next.getList().listIterator());
+                    stack.push(cur.getList().listIterator());
                 }
             }else{
                 stack.pop();
