@@ -39,7 +39,7 @@ public class NestedIterator implements Iterator<Integer> {
                     cur = next;
                     return true;
                 }else{
-                    stack.push(peek.getList.listIterator());
+                    stack.push(next.getList.listIterator());
                 }
             }else{
                 stack.pop();
